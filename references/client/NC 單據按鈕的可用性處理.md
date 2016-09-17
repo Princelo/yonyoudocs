@@ -16,7 +16,9 @@
 客戶端的xml配置文件來實現的。
 
 兩種狀態下配置的按鈕：
+
 ![button-xml](https://github.com/Princelo/yonyoudocs/blob/master/references/client/images/button-xml.png?raw=true)
+
 每個按鈕對應的類，默認是 pubapp.uif2app 目錄下對應的 action，如果該 action 不
 能滿足需求，要自己寫 action 方法。
 
@@ -31,6 +33,7 @@
 以添加按鈕為例，我們來看下代碼：
 
 ![button-code1](https://github.com/Princelo/yonyoudocs/blob/master/references/client/images/button-code1.png?raw=true)
+
 當點擊添加按鈕時，StandardBillAddAction 中的 doAction 方法被觸發，該方法將當前
 UIState 狀態改為 ADD 狀態。關於 UIState 的狀態類型，可以參見下圖：
 StandardBillAddAction 中的 isActionEnable() 方法，是從父類繼承的。返回值為 boolean
@@ -38,11 +41,13 @@ StandardBillAddAction 中的 isActionEnable() 方法，是從父類繼承的。�
 返回 false，頁面按鈕可操作。
 你可以根據自己的需求來定義按鈕是否可用，比如上面的例子中，如果需要該按鈕只在
 NOT_EDIT 和 ADD 狀態下可用，則該方法應該這樣寫：
+
     ```
-    protected boolean isActionEnable() {
-        return this.model.getUiState() == UIState.NOT_EDIT
-            || this.model.getUiState() == UIState.ADD;
-    }
+    protected boolean isActionEnable() {<br />
+        return this.model.getUiState() == UIState.NOT_EDIT<br />
+            || this.model.getUiState() == UIState.ADD;<br />
+    }<br />
     ```
+
 如果有更複雜的情況，要進行邏輯判斷，只有在滿足需要的情況下才能返回 true，否則
 返回 false。
