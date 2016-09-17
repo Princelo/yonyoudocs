@@ -43,10 +43,10 @@ StandardBillAddAction 中的 isActionEnable() 方法，是從父類繼承的。�
 NOT_EDIT 和 ADD 狀態下可用，則該方法應該這樣寫：
 
     ```
-    protected boolean isActionEnable() {<br />
-        return this.model.getUiState() == UIState.NOT_EDIT<br />
-            || this.model.getUiState() == UIState.ADD;<br />
-    }<br />
+    protected boolean isActionEnable() {
+        return this.model.getUiState() == UIState.NOT_EDIT
+            || this.model.getUiState() == UIState.ADD;
+    }
     ```
 
 如果有更複雜的情況，要進行邏輯判斷，只有在滿足需要的情況下才能返回 true，否則
