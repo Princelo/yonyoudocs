@@ -5,7 +5,7 @@
 我們可以看到，越來越多的通用任務已被從應用程序中分離出來並放入分解的管理系統中。
 圖1說明了這種演進。
 
-!(bpf-ch01-001)[https://github.com/Princelo/yonyoudocs/attachments/images/bpf-ch01-001.png]
+![bpf-ch01-001](https://github.com/Princelo/yonyoudocs/blob/master/attachments/images/bpf-ch01-001.png?raw=true)
 
 1975-1985 分離的應用
     信息系統由被分解的應用組成，每個應用都有自己的數據庫和定義。
@@ -24,7 +24,7 @@
 企業的經營管理也是遵循一定規律的，其業務也需要按照一定的業務規則運行。
 業務按照一定的業務規則運行或處理就形成了企業的業務流程。
 
-!(bpf-ch01-002)[https://github.com/Princelo/yonyoudocs/attachments/images/bpf-ch01-002.png]
+![bpf-ch01-002](https://github.com/Princelo/yonyoudocs/blob/master/attachments/images/bpf-ch01-002.png?raw=true)
 
 ## 工作流
 
